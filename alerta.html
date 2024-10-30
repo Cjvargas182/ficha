@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Alerta de Información</title>
+</head>
+<body>
+    <script>
+        // Extraer parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nombre = urlParams.get('nombre');
+        const area = urlParams.get('area');
+        const rfc = urlParams.get('rfc');
+
+        // Mostrar la información en una alerta
+        alert(`Información del trabajador:\nNombre: ${nombre}\nÁrea: ${area}\nRFC: ${rfc}`);
+    </script>
+</body>
+</html>
