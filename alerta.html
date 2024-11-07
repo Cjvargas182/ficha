@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Alerta de Información</title>
+</head>
+<body>
+    <script>
+        // Extraer parámetros de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const nombre = urlParams.get('nombre');
+        const area = urlParams.get('area');
+        const rfc = urlParams.get('rfc');  // Añadido rfc ya que faltaba en el código
+        const f_nacimiento = urlParams.get('f_nacimiento');
+        const enfermedades = urlParams.get('enfermedades');
+        const medicamentos = urlParams.get('medicamentos');
+        const alergias_a = urlParams.get('alergias_a');
+        const alergias_f = urlParams.get('alergias_f');
+        const g_sanguineo = urlParams.get('g_sanguineo');
+        const c_nombre1 = urlParams.get('c_nombre1');
+        const parentesco1 = urlParams.get('parentesco1');
+        const telefono1 = urlParams.get('telefono1');
+        const c_nombre2 = urlParams.get('c_nombre2');
+        const parentesco2 = urlParams.get('parentesco2');
+        const telefono2 = urlParams.get('telefono2'); // Quitado espacio extra
+
+        // Mostrar la información en una alerta
+        alert(`INFORMACIÓN DEL TRABAJADOR:\n\nNombre: ${nombre}\nÁrea: ${area}\nRFC: ${rfc}\nFecha de Nacimiento: ${f_nacimiento}\n\nDATOS MÉDICOS:\nEnfermedades: ${enfermedades}\nMedicamentos: ${medicamentos}\nAlergias Alimenticias: ${alergias_a}\nAlergias Farmacológicas: ${alergias_f}\nGrupo Sanguíneo: ${g_sanguineo}\n\nCONTACTOS DE EMERGENCIA:\nNombre (1): ${c_nombre1}\nParentesco (1): ${parentesco1}\nTeléfono (1): ${telefono1}\nNombre (2): ${c_nombre2}\nParentesco (2): ${parentesco2}\nTeléfono (2): ${telefono2}`);
+    </script>
+</body>
+</html>

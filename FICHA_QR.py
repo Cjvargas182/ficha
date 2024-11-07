@@ -24,12 +24,25 @@ def guardar_en_excel(nombre, area, rfc, f_nacimiento, enfermedades, medicamentos
     wb.save(archivo_excel)
 
 # Crear la URL que contiene los datos como parámetros
-def crear_url_alerta(nombre, area, rfc):
+def crear_url_alerta(nombre, area, rfc,f_nacimiento,enfermedades,medicamentos,alergias_a,alergias_f,g_sanguineo,c_nombre1,parentesco1,telefono1,c_nombre2,parentesco2,telefono2):
     base_url = "https://ficha-gold.vercel.app/"  # Cambia a tu dominio
     parametros = {
         "nombre": nombre,
         "area": area,
-        "rfc": rfc
+        "rfc": rfc,
+        "f_nacimiento": f_nacimiento,
+        "enfermedades": enfermedades,
+        "medicamentos": medicamentos,
+        "alergias_a": alergias_a,
+        "alergias_f": alergias_f,
+        "g_sanguineo": g_sanguineo,
+        "c_nombre1": c_nombre1,
+        "parentesco1": parentesco1,
+        "telefono1": telefono1,
+        "c_nombre2": c_nombre2,
+        "parentesco2": parentesco2,
+        "telefono2": telefono2
+        
     }
     return f"{base_url}?{urllib.parse.urlencode(parametros)}"
 

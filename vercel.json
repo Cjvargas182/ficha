@@ -1,14 +1,11 @@
-<<<<<<< HEAD
 {
     "routes": [
       { "src": "/(.*)", "dest": "/alerta.html" }
     ]
   }
-=======
 {
     "routes": [
       { "src": "/(.*)", "dest": "/alerta.html" }
     ]
   }
->>>>>>> 0496b0b8d98be8122cc13a10c90ecdd822b8b11c
   
